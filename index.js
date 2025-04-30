@@ -10,21 +10,21 @@ import { connect } from 'cloudflare:sockets';
  * User configuration and settings
  * Generate UUID: [Windows] Press "Win + R", input cmd and run: Powershell -NoExit -Command "[guid]::NewGuid()"
  */
-let userID = 'c4fa89d4-fcb9-48ba-adbc-665181cc817f';
+let userID = '02d70ff2-34aa-403b-a064-13edc39b4828';
 
 /**
  * Array of proxy server addresses with ports
  * Format: ['hostname:port', 'hostname:port']
  */
-const proxyIPs = ['thumbayan.com:443', 'thumbayan.com:443'];
+const proxyIPs = ['104.21.71.119', '172.67.144.205'];
 
 // Randomly select a proxy server from the pool
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 let proxyPort = proxyIP.includes(':') ? proxyIP.split(':')[1] : '443';
 
 // Alternative configurations:
-// Single proxy IP: let proxyIP = 'cdn.xn--b6gac.eu.org';
-// IPv6 example: let proxyIP = "[2a01:4f8:c2c:123f:64:5:6810:c55a]"
+// Single proxy IP: let proxyIP = '104.21.71.119';
+// IPv6 example: let proxyIP = "[172.67.144.205]"
 
 /**
  * SOCKS5 proxy configuration
